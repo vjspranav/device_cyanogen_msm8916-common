@@ -421,7 +421,7 @@ on property:persist.usb.chgdisabled=0
 service perfd /vendor/bin/perfd
    class main
    user root
-   group root readproc
+   group root readproc system
    disabled
    writepid /dev/cpuset/system-background/tasks
 
