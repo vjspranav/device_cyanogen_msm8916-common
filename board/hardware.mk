@@ -1,2 +1,2 @@
-BOARD_HARDWARE_CLASS += hardware/cyanogen
-BOARD_USES_HARDWARE := true
+BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
+BOARD_USES_CYANOGEN_HARDWARE := true
