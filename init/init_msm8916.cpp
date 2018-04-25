@@ -104,7 +104,8 @@ static void init_alarm_boot_properties()
          * 7 -> CBLPWR_N pin toggled (for external power supply)
          * 8 -> KPDPWR_N pin toggled (power key pressed)
          */
-        if (buf[0] == '3' || tmp == "true")
+        if ((Trim(boot_reason) == "3" || tmp == "true")
+                && Trim(power_off_alarm) == "1")
             property_set("ro.alarm_boot", "true");
         else
             property_set("ro.alarm_boot", "false");
