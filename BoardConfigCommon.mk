@@ -66,7 +66,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 #Hardware
-BOARD_HARDWARE_CLASS += hardware/lineage/lineagehw
+BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 BOARD_USES_HARDWARE := true
 
 #Kernel
