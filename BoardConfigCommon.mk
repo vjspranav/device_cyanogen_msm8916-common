@@ -53,7 +53,7 @@ ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8939)
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(PLATFORM_PATH)/power/power_ext.c
 endif
 TARGET_POWERHAL_VARIANT := qcom
-#TARGET_RIL_VARIANT := caf
+TARGET_RIL_VARIANT := caf
 MALLOC_SVELTE := true
 
 #Bootloader
@@ -174,4 +174,5 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-
+LOCAL_C_INCLUDES += hardware/ril-caf/include
+LOCAL_EXPORT_C_INCLUDE_DIRS := hardware/ril-caf/include
