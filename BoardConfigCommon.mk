@@ -95,8 +95,10 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
-#Display
+# CNE
+BOARD_USES_QCNE := true
 
+# Display
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 
@@ -126,6 +128,14 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 #Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
+# Peripheral manager
+TARGET_PER_MGR_ENABLED := true
+
+# Radio
+MALLOC_SVELTE := true
+TARGET_RIL_VARIANT := caf
+PROTOBUF_SUPPORTED := true
+
 # Recovery
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cm
 
@@ -134,6 +144,13 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 
 #Properties
 TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
+
+#Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib64/lib-imsvideocodec.so|libshim_ims.so
+
+# Telephony
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 #Wifi
 BOARD_HAS_QCOM_WLAN := true

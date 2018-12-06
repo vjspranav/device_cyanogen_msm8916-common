@@ -58,6 +58,11 @@ PRODUCT_PACKAGES += \
       android.hardware.health@1.0-impl \
       android.hardware.health@1.0-service
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    libshim_ims
+
 # Init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
@@ -103,7 +108,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
-# Power HAL
+# Netutils
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0 \
+    android.system.net.netd@1.0
+
+PRODUCT_PACKAGES += \
+   libandroid_net \
+   libandroid_net_32
+
+# Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     android.hardware.power@1.0-service \
@@ -113,7 +127,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbt-vendor \
     android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service
+    android.hardware.bluetooth@1.0-service \
+    libtinyxml \
+    libxml2
 
 # Init
 PRODUCT_PACKAGES += \
@@ -165,11 +181,14 @@ PRODUCT_PACKAGES += \
     keystore.msm8916
 endif
 
-
 #Radio
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+
+# Telephony
+PRODUCT_PACKAGES += telephony-ext ims-ext-common
+PRODUCT_BOOT_JARS += telephony-ext
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -201,6 +220,11 @@ PRODUCT_PACKAGES += \
     libwcnss_qmi \
     wcnss_service \
     libwpa_client
+
+# Whitelisted apps
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 PRODUCT_PACKAGES += \
     wificond \
