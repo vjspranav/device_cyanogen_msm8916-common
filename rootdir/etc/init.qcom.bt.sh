@@ -89,3 +89,6 @@ esac
 setprop vendor.bluetooth.status on
 
 exit 0
+
+#Fix BT Address
+setprop persist.service.bdroid.bdaddr `cat /efs/bluetooth/bt_addr`
