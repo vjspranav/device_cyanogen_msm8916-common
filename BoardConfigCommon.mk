@@ -119,13 +119,18 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 # Render
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
+TARGET_FS_CONFIG_GEN := $(PLATFORM_PATH)/config.fs
+
 
 #FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
-#Media
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
+# Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Peripheral manager
