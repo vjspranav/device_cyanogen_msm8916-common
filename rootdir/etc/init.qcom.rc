@@ -78,6 +78,11 @@ on late-fs
     # Allow writing to the kernel trace log.
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
 
+    service loggy /vendor/bin/loggy.sh
+       class core
+       user root
+       oneshot
+
 # msm specific files that need to be created on /data
 on post-fs-data
 

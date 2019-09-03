@@ -249,3 +249,7 @@ $(LOCAL_PATH)/charger/images/red_6.png:$(TARGET_OUT_DIR)/root/res/images/red_6.p
 $(LOCAL_PATH)/charger/images/red_7.png:$(TARGET_OUT_DIR)/root/res/images/red_7.png \
 $(LOCAL_PATH)/charger/images/red_8.png:$(TARGET_OUT_DIR)/root/res/images/red_8.png \
 $(LOCAL_PATH)/charger/images/red_9.png:$(TARGET_OUT_DIR)/root/res/images/red_9.png
+
+# loggy
+PRODUCT_PACKAGES += \
+    loggy.sh
