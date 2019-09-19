@@ -31,6 +31,7 @@ ro.min_freq_0=200000
 ro.min_freq_4=200000
 
 #Bluetooth
+persist.bluetooth.bluetooth_audio_hal.disabled=true
 qcom.bluetooth.soc=smd
 ro.bluetooth.dun=true
 ro.bluetooth.hfp.ver=1.7
