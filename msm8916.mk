@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio.effect@5.0 \
     android.hardware.audio.effect@5.0-impl \
-    android.hardware.broadcastradio@1.0-impl
+    android.hardware.broadcastradio@1.0-impl \
 #   android.hardware.soundtrigger@2.0-impl
 
 PRODUCT_COPY_FILES += \
@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/vendor/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/vendor/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/vendor/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:system/vendor/etc/permissions/android.hardware.telephony.ims.xml \
+#    frameworks/native/data/etc/android.hardware.telephony.ims.xml:system/vendor/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/vendor/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/vendor/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/vendor/etc/permissions/android.hardware.wifi.direct.xml \
@@ -160,7 +160,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.0-service.widevine
+#    android.hardware.drm@1.0-service.widevine
 
 #FM
 PRODUCT_PACKAGES += \
